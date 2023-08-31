@@ -2,7 +2,37 @@
     --border-radius: .5em;
     --primary-color: #96C291;
     --secondary-color: #FFB7B7;
-    --background-color: #F4EEEE;
+    --background-color: #f4eeee59;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url("./images/background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    height:5%;
+    background-color: rgb(144, 179, 223);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+h1 {
+    margin: 0px;
+    text-shadow: .1em .1em rgba(255, 255, 255, 0.43);
+}
+
+a {
+    text-decoration: none;
 }
 
 .cat-figure {
@@ -13,11 +43,17 @@
     background-color: var(--secondary-color);
     border-radius: var(--border-radius);
     transition: 800ms;
+    color: white;
+    font-weight: bold;
+    box-shadow: 10px 10px 14px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 10px 10px 14px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 10px 10px 14px 0px rgba(0,0,0,0.5);
 }
 
 .cat-figure:hover {
     background-color: var(--primary-color);
-    box-shadow: .5em 1em 1em;
+    transform: scale(1.1);
+    box-shadow: var(--card-shadow);
 }
 
 .cat-figure img {
@@ -33,7 +69,25 @@
 .cat-figure-container {
     border-width: .1em;
     border-color: rgb(161, 161, 161);
-    border-style: solid;
     border-radius: var(--border-radius);
-    background-color: var(--background-color)
+    background-color: var(--background-color);
+    margin: 1rem;
+}
+
+.cat-figure-container a:nth-child(odd) .cat-figure {
+    background-color: #96C291;
+}
+
+.navigation-link {
+    margin-left: 1rem;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+    background-color:rgb(164, 192, 216);
+    width: 3rem;
+    height: 1rem;
+    text-align: center;
+}
+
+.navigation-link:hover {
+    opacity: 80%;
 }
